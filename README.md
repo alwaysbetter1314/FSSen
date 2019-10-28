@@ -42,5 +42,5 @@ uwsgi   --http 0.0.0.0:80  --callable app --wsgi-file flask_app.py --http-keepal
 ```
 6. 按进程名字诛九族
 ```
-ps | grep uwsgi|awk '{print $1}'|xargs killall -9
+ps | grep uwsgi|awk '{print $1}'|xargs kill -9
 ```
