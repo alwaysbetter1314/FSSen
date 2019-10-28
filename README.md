@@ -29,7 +29,7 @@ deb-src http://mirrors.163.com/debian-security/ buster/updates main non-free con
 EOF
 ```
 3. kill 掉后台任务
-`obs -l |awk '{print $2}' |xargs -n1 kill`
+`jobs -l |awk '{print $2}' |xargs -n1 kill`
 4. web server并发测试
 `ab -c 1000 -n 10000 http://ip:port/`
 5. uwsgi 启动flask_app
