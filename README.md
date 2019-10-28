@@ -33,7 +33,9 @@ EOF
 jobs -l |awk '{print $2}' |xargs -n1 kill
 ```
 4. web server并发测试
-```ab -c 1000 -n 10000 http://ip:port/```
+```
+ab -c 1000 -n 10000 http://ip:port/
+```
 5. uwsgi 启动flask_app
 ```
 uwsgi   --http 0.0.0.0:80  --callable app --wsgi-file flask_app.py --http-keepalive --master
